@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.issuetrack.bugviewController">
+   <children>
+      <Button fx:id="submitBug" layoutX="33.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotodetails" prefHeight="70.0" prefWidth="229.0" text="Submit A Bug">
+         <font>
+            <Font name="FreeMono" size="26.0" />
+         </font></Button>
+      <Label layoutX="675.0" layoutY="38.0" prefHeight="80.0" prefWidth="550.0" text="Submitted Bugs">
+         <font>
+            <Font name="FreeMono" size="65.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bugTable" layoutX="33.0" layoutY="132.0" prefHeight="909.0" prefWidth="1837.0">
+        <columns>
+          <TableColumn fx:id="NumberColumn" prefWidth="300.0" text="Number" />
+          <TableColumn fx:id="titleColumn" prefWidth="301.0" text="Title" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="359.0" text="Description" />
+            <TableColumn fx:id="createdColumn" minWidth="0.0" prefWidth="267.0" text="Created" />
+            <TableColumn fx:id="updatedColumn" prefWidth="267.0" text="Updated" />
+            <TableColumn fx:id="statusColumn" minWidth="0.0" prefWidth="342.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
